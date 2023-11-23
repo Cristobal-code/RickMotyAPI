@@ -1,10 +1,10 @@
 import { Controller, Get } from '@nestjs/common';
-import { PersonajeServiceService } from './Services/personaje.service';
+import { PersonajeService } from './Services/personaje.service';
 import { Personaje } from './Models/personaje';
 
 @Controller()
 export class AppController {
-  constructor(private readonly personajesService: PersonajeServiceService) { }
+  constructor(private readonly personajesService: PersonajeService) { }
 
   @Get('/personajes')
   getPersonajes(): Promise<Personaje[]> {

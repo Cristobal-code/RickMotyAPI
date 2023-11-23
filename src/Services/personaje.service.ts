@@ -4,7 +4,7 @@ import { ConfigService } from '@nestjs/config';
 import axios from 'axios';
 import { RespondeRickMorty } from 'src/interfaces/ResponseRickMorty';
 @Injectable()
-export class PersonajeServiceService {
+export class PersonajeService {
     constructor(private readonly configService: ConfigService) { }
 
     async getPersonajes(): Promise<Personaje[]> {
